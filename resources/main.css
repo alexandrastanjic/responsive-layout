@@ -110,7 +110,7 @@ header li a{
   text-align: center;
   padding-top: 200px;
 }
-
+/* nu cred ca imaginea o doresti in float aici, mai degraba un container sa le contina pe toate: imagine, titlu, locatie, categorie. iti recomand sa folosesti flex pentru layout-ul asta, este mult mai usor de folosit decat float si cu mai putine efecte secundare de reparat. */
 .first-row img, .second-row img{
   float: left;
   height:400px;
@@ -129,6 +129,7 @@ header li a{
 }
 
 .text-image p {
+  /* acestea nu le vrei inline-block pentru ca locatia o vrei sub descriere, nu in continuare */
   display: inline-block;
   margin: 0;
   font-size: 25px;
@@ -139,13 +140,13 @@ header li a{
 
 .text-image p:nth-last-child(1){
   transform: rotate(-90deg);
+  /* foarte manuala pozitionarea asta, nu iti recomand, este mai ok sa folosesti o pozitionare absoluta fata de un parinte relativ. vom explica sambata la lectia mai mult. este prea mult de refacut sa iti arat pe cod */
   position: relative;
   left: -80px;
   top: 180px;
   font-size: 20px;
 
 }
-
 
 .contact-wrapper {
   background-color: #2b2b2b;
@@ -254,6 +255,7 @@ form button i{
       width: 90%;
     }
 
+    /* aici este lejer inconsistent faptul ca o data folosesti clearfix si odata folosesti clear pentru acelasi set de reguli, iti recomand sa te rezumi la una dintre alternative*/
     .clear{
       clear: both;
     }
