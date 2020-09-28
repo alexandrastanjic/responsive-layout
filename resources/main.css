@@ -96,7 +96,7 @@ nav ul li{
 }
 
 .vertical-line {  
-  border-left: 2px solid lightgrey;
+  border-left: 2px solid #CDCDCD;
   height: 60px;
   position: absolute;
   left: 25px;
@@ -106,6 +106,7 @@ nav ul li{
   position: absolute;
   left: -30px;
   padding-top: 60px;
+  color:#CDCDCD;
 
   /*exista o varianta mai buna pt pozitionarea iconitelor?... */
 }
@@ -319,7 +320,7 @@ br {
  /* nu inteleg ce fac gresit, nu reusesc sa centrez titlurile sub nicio forma
  project catergory pe mobile
  si pe langa asta, desi sunt toate aceeasi clasa, doua dintre ele sunt plasate aiurea - care ar putea fi motivul?*/
- 
+
 .wrapper .project-category {
   margin-top:0;
   transform: none;
