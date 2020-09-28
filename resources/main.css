@@ -1,157 +1,211 @@
+* {
+  box-sizing: border-box;
+}
 html, body{
-  margin: 0;
+  margin:  0;
   padding: 0;
-  height: 100%;
-  width: 100%;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-ul, ol{
+ul, ol {
   list-style-type: none;
+  margin: 0;
 }
- 
-.background-wrapper{
-  width: 100%;
+
+h1, h2, h3, .projects-wrapper > div{
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.container{
   height: 100%;
-  background-image: url(../assets/bg-header.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  font-family: 'Open Sans', 'Duru Sans', sans-serif;
-  padding: 50px;
-  box-sizing: border-box;
-}
-
-img {
-  opacity: 0.5;
-}
-
-header   {
-  z-index: 99;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-   
-}
-
-.black-wrapper {
-  background-color: #2b2b2b;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 50%;
-  width: 200px;
-}
-
-.black-wrapper h1 {
-  color: #fff;
-  font-size: 36px;
-  text-align: center;
-}
-
-.line {
-  content: "";
-  border-left: 1px solid #fff;
-  height: 40px;
-  text-align: center;
-  position: absolute;
-  left: 25px;
-}
-
-.social-corner-wrapper{
-  display: flex;
-  align-items: flex-start;
-  
-}
-.social-corner-wrapper ul li a{
-  color:#fff;
-  font-size: 30px;
-  padding-top: 5px;
-  
- 
-}
-header ul {
-  float: right;
-}
-
-header li {
-  display: inline;
-  padding-right: 30px;
-}
-
-header li a{
-  float: left;
-  padding: 8px 15px;
-  display: block;
+  width: 100%;
   color: #ffffff;
-  font-size: 20px;
-  font-weight: 400;
+  font-family: 'Open Sans', 'Oswald', sans-serif;
 }
 
-.mobile-menu-wrapper {
-  display: none;
-  color: #fff;
-  padding: 14px;
-  font-size: 40px;
+nav ul, .header-title-wrapper, .mobile-menu, .projects-wrapper, .form-wrapper, .row-wrapper{
+  display: flex;
+}
+
+nav ul, .header-title-wrapper, .mobile-menu {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+nav ul li{
+  padding: 8px 15px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.mobile-menu {
+  padding: 0 20px;
   justify-content: center;
   text-align: end;
 }
 
-
-.title-wrapper h1 {
-  font-size: 60px;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 200px;
+.mobile-menu i{
+  font-size: 35px;
 }
-/* nu cred ca imaginea o doresti in float aici, mai degraba un container sa le contina pe toate: imagine, titlu, locatie, categorie. iti recomand sa folosesti flex pentru layout-ul asta, este mult mai usor de folosit decat float si cu mai putine efecte secundare de reparat. */
-.first-row img, .second-row img{
-  float: left;
-  height:400px;
-  width:33.3%;
-  object-fit: cover;
+.mobile-menu {
+  display: none;
+}
+
+.header-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../assets/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
   position: relative;
+  z-index: 1;
+  padding: 50px;
+  font-family: 'Oswald', sans-serif;
 }
 
-.clearfix{
-  clear: both;
+.overlay {
+  background-color: rgba(41, 41, 41, 0.55);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-
-.text-image{
-  padding: 20px;
- 
-}
-
-.text-image p {
-  /* acestea nu le vrei inline-block pentru ca locatia o vrei sub descriere, nu in continuare */
-  display: inline-block;
-  margin: 0;
-  font-size: 25px;
-  color: #000000;
-  font-family: 'Open Sans', 'Duru Sans', sans-serif;
-  text-transform: uppercase;
-}
-
-.text-image p:nth-last-child(1){
-  transform: rotate(-90deg);
-  /* foarte manuala pozitionarea asta, nu iti recomand, este mai ok sa folosesti o pozitionare absoluta fata de un parinte relativ. vom explica sambata la lectia mai mult. este prea mult de refacut sa iti arat pe cod */
-  position: relative;
-  left: -80px;
-  top: 180px;
-  font-size: 20px;
-
-}
-
-.contact-wrapper {
+.corner-wrapper {
   background-color: #2b2b2b;
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60vh; 
+  width: 25%;
+}
+
+.corner-wrapper p {
+  font-size: 50px;
+  padding-left: 40px;
+  margin: 20px 0;
+}
+
+.vertical-line {  
+  border-left: 2px solid lightgrey;
+  height: 60px;
+  position: absolute;
+  left: 25px;
+}
+
+.social-list {
+  position: absolute;
+  left: -30px;
+  padding-top: 60px;
+
+  /*exista o varianta mai buna pt pozitionarea iconitelor?... */
+}
+
+.social-list li i{
+  font-size: 40px;
+  padding: 10px;
+}
+
+.header-title-wrapper {
+  height: 60vh;
+  align-items: center;
+}
+.header-title-wrapper h1{
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+
+.projects-wrapper, .wrapper{
+  position: relative;
+  z-index: 1;
+  flex-wrap:wrap;
+  /* border: 5px solid yellow; */
+  height: 100%;
+}
+
+.projects-wrapper > div {
+  width: 33.3%;
+  height: 100vh; 
+  /* am incercat sa folosesc % dar nu imi dau seama ce am facut gresit ce de nu merge */
+}
+
+.projects-img1, .projects-img2, .projects-img3, .projects-img4, .projects-img5, .projects-img6 {
+ position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* border: 2px solid red; */
+}
+
+.projects-img1 {
+  background-image: url(../assets/concert-hall.jpg);
+}
+
+.projects-img2 {
+  background-image: url(../assets/bedroom-2.jpg);
+}
+
+.projects-img3 {
+  background-image: url(../assets/hotel.jpg);
+}
+
+.projects-img4 {
+  background-image: url(../assets/bedroom-1.jpg);
+}
+
+.projects-img5 {
+  background-image: url(../assets/library.jpg);
+}
+
+.projects-img6 {
+  background-image: url(../assets/kitchen.jpg);
+}
+
+.wrapper .project-description{
+  font-size: 20px;
+  padding: 20px 0 0 20px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 3px;
+}
+
+.project-description span:nth-child(3) {
+  color: #c09c78;
+}
+
+.wrapper .project-category {
+  font-size: 14px;
+  margin-top: 200px; /* stiu, super manuala centrarea, din pacate tot nu am stiut cum sa fac si am facut-o in stilul meu caracteristic: bad practice dar frustrarea e mai mica cand vad asezat ok in pagina*/
+  transform: rotate(-90deg);
+  height: 50%;
+  letter-spacing: 5px;
+}
+
+footer{
+  width: 100%;
+  background-color: #2b2b2b;
   text-align: center;
+}
+
+.form-wrapper{
+  justify-content: center;
+}
+
+.row-wrapper{
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
 }
 
 .button-wrapper button, form button {
@@ -166,21 +220,15 @@ header li a{
   margin: 40px auto;
 }
 
-form button{
-  background-color: #c09c78;
-}
-
-.row-wrapper{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .contact-wrapper h2 {
   padding: 0;
-  font-family: 'Duru sans','Open Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-size: 36px;
+  letter-spacing: 10px;
+  color: #fff;
+  font-weight: 300;
+
 }
 
 .contact-wrapper span{
@@ -192,72 +240,117 @@ input,textarea {
   margin: 10px;
   background-color: #3b3b3b;
   border: none;
-  color: #fff;
-}
+} 
 
 textarea {
-  height: 90px;
+  height: 130px;
 }
-
+form button{
+  background-color: #c09c78;
+}
 form button i{
   font: 30px;
+ 
 }
 
-  @media (max-width: 600px) {
-    .first-row img, .second-row img{
-      width: 100%;
-    }
-    .mobile-menu-wrapper{
-      display: block;
-    }
-    .menu-bar-wrapper{
-      display: none;
-    }
 
-    .title-wrapper h1 {
-      font: 40px;
-      text-align: center;
-    }
-
-    .black-wrapper {
-      height: 60%;
-    }
-    .black-wrapper h1 {
-      font-size: 20px;
-    }
-
-    .social-corner-wrapper ul{
-      position: absolute;
-      left: -30px;
-      top: 80px;
-    }
-
-    input, textarea {
-      width: 80%;
-    }
-
-   .contact-wrapper .button-wrapper button{
-      display: none;
-    }
-
-    .contact-wrapper h2{
-      padding-top: 40px;
-    }
-
-    form button{
-      padding: 15px 30px;
-      float: right;
-      margin-right: 30px;
-    }
-
-    .row-wrapper{
-      display: inline-block;
-      width: 90%;
-    }
-
-    /* aici este lejer inconsistent faptul ca o data folosesti clearfix si odata folosesti clear pentru acelasi set de reguli, iti recomand sa te rezumi la una dintre alternative*/
-    .clear{
-      clear: both;
-    }
-
+@media (max-width: 600px) {
+.mobile-menu{
+    display: block;
   }
+
+.desktop-menu {
+    display: none;
+  }
+
+.header-wrapper{
+    height: 60vh;
+  }
+
+.corner-wrapper {
+    width: 35%;
+    height:60%;
+  }
+
+.corner-wrapper p {
+    font-size: 30px;
+    padding-left:40px;
+  }
+
+.vertical-line {  
+  left: 30px;
+  height: 40px;
+}
+
+.social-list li i {
+  font-size: 20px;
+  padding: 5px
+}
+.social-list {
+    left: -20px;
+}
+
+.header-title-wrapper {
+  justify-content: center;
+}
+
+.header-title-wrapper h1{
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.projects-wrapper > div {
+  width: 100%;
+  height: 50vh;
+}
+
+.wrapper {
+  display: flex;
+}
+
+br {
+  display: none;
+}
+
+.wrapper .project-description , .project-category {
+  justify-content: center;
+  margin: 0 auto;  
+}
+ /* nu inteleg ce fac gresit, nu reusesc sa centrez titlurile sub nicio forma
+ project catergory pe mobile
+ si pe langa asta, desi sunt toate aceeasi clasa, doua dintre ele sunt plasate aiurea - care ar putea fi motivul?*/
+ 
+.wrapper .project-category {
+  margin-top:0;
+  transform: none;
+  padding: 0;
+  position: unset;
+}
+
+input, textarea {
+  width: 90%;
+  display: inline-block;
+}
+
+.contact-wrapper .button-wrapper button{
+    display: none;
+}
+
+.row-wrapper{
+ width: 100%;
+ flex-direction: column;
+ align-self: center;
+}
+
+.contact-wrapper h2 {
+  font-size: 40px;
+  padding: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.form-wrapper button {
+  margin: 20px;
+  float: right;
+}
+
+}
