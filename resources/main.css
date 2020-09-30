@@ -82,6 +82,7 @@ nav ul li{
 }
 .corner-wrapper {
   background-color: #2b2b2b;
+  /* nu ai nevoie de pozitionare absoluta aici, este ordinea normala a layout-ului, trebuie doar sa renunti la padding si margin si ajungi la acelasi efect fara a aapela de pozitionare. Recomand pozitionarea doar daca este nevoie, nu ca o prima solutie */
   position: absolute;
   top: 0;
   left: 0;
@@ -109,6 +110,7 @@ nav ul li{
   color:#CDCDCD;
 
   /*exista o varianta mai buna pt pozitionarea iconitelor?... */
+  /* se aplica ce am scris mai sus la .corner-wrapper */
 }
 
 .social-list li i{
@@ -138,8 +140,10 @@ nav ul li{
   width: 33.3%;
   height: 100vh; 
   /* am incercat sa folosesc % dar nu imi dau seama ce am facut gresit ce de nu merge */
+  /* % functioneaza cum te astepti doar daca intreg lantul ierarhic are un height impus, fie ca e fix sau %. dar daca la un singur element din latul ierarhic lipseste height, atunci sunt toate sansele sa iti ignore %, pentru ca nu stie din ce sa calculeze */
 }
 
+/* aici puteai sa folosesti doar o clasa comuna in loc sa le listezi pe toate. nu este neaparat gresit, dar era o solutie mai simpla, care asigura si respectarea principiului de re-utilizare. */
 .projects-img1, .projects-img2, .projects-img3, .projects-img4, .projects-img5, .projects-img6 {
  position: relative;
   width: 100%;
@@ -186,7 +190,15 @@ nav ul li{
 
 .wrapper .project-category {
   font-size: 14px;
-  margin-top: 200px; /* stiu, super manuala centrarea, din pacate tot nu am stiut cum sa fac si am facut-o in stilul meu caracteristic: bad practice dar frustrarea e mai mica cand vad asezat ok in pagina*/
+  /* margin-top: 200px;  */
+  /* stiu, super manuala centrarea, din pacate tot nu am stiut cum sa fac si am facut-o in stilul meu caracteristic: bad practice dar frustrarea e mai mica cand vad asezat ok in pagina*/
+  /* se invata chestiile astea cu experienta, nu te nelinisti prea tare */
+  /* nu inteleg prea bine de ce nu ai pozitionat aici, acesta este unul din cazurile specifice unde vrem pozitionare */
+  /* bineinteles, pe mobile trebuie sa renunti la pozitionare, ca sa poti centra */
+  position: absolute;
+  bottom: -110px;
+  left: 150px;
+  /* cred ca poate sa fie confusing pozitionarea din cauza lui transform, dar poti sa renunti la transform temporar si sa vezi cum functioneaza, apoi sa ajustezi. de obicei trebuie sa le iei pe rand ca sa intelegi bine cum functioneaza fiecare */
   transform: rotate(-90deg);
   height: 50%;
   letter-spacing: 5px;
@@ -303,6 +315,8 @@ form button i{
 .projects-wrapper > div {
   width: 100%;
   height: 50vh;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .wrapper {
@@ -314,7 +328,11 @@ br {
 }
 
 .wrapper .project-description , .project-category {
-  justify-content: center;
+  /* ai nevoie sa schimbi si directia aici, nu ajunge justify-content. flex de default le aseaza pe row, orizontal, una langa cealalta */
+  /* am pus regulile astea pe .projects-wrapper > div (randul 315 la mine, sper ca e clar de ce) */
+  /* nu pare centrat perfect vertical pentru ca ai un height de 50% pe category, pe care rog sa il ajustezi tu  */
+ /* flex-direction: column;
+  justify-content: center; */
   margin: 0 auto;  
 }
  /* nu inteleg ce fac gresit, nu reusesc sa centrez titlurile sub nicio forma
