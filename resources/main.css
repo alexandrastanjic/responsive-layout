@@ -8,6 +8,7 @@ html, body{
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 ul, ol {
@@ -15,19 +16,74 @@ ul, ol {
   margin: 0;
 }
 
-h1, h2, h3, .projects-wrapper > div{
+h1, h2, h3, .projects-wrapper > div {
   margin: 0;
   text-transform: uppercase;
 }
 
-.container{
+.container, .container-mobile-menu {
+  position: relative;
+  z-index: 1;
   height: 100%;
   width: 100%;
   color: #ffffff;
   font-family: 'Open Sans', 'Oswald', sans-serif;
 }
 
-nav ul, .header-title-wrapper, .mobile-menu, .projects-wrapper, .form-wrapper, .row-wrapper{
+.container-mobile-menu {
+  position: fixed;
+  z-index: 99;
+  background-color: #3b3b3b;
+}
+
+.mobile-top-wrapper {
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.mobile-logo-text {
+  font-size:22px;
+}
+
+.mobile-top-wrapper img{
+  height: 40px;
+  width: auto;
+}
+
+.mobile-list-wrapper {
+  margin-top: 50px;
+  font-size: 36px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 10px;
+  font-weight: 300;
+}
+
+.mobile-list-wrapper ul{
+  padding-left: 30x;
+}
+
+.mobile-list-wrapper ul li:first-child {
+  font-weight: 500;
+}
+
+.mobile-footer-wrapper {
+  margin-top: 14px;
+  height: 35%;
+  align-items: flex-end; 
+  text-align: center;
+}
+
+.mobile-footer-wrapper div  {
+  font-size: 40px;
+  color: #6B6B6B;
+  border: 1px solid #6B6B6B;
+  border-bottom: none;
+  width: 50%;
+  padding: 20px;
+}
+
+.mobile-top-wrapper, .mobile-footer-wrapper, nav ul, .header-title-wrapper,
+.mobile-menu, .projects-wrapper, .form-wrapper, .row-wrapper{
   display: flex;
 }
 
@@ -266,7 +322,6 @@ form button i{
  
 }
 
-
 @media (max-width: 600px) {
 .mobile-menu{
     display: block;
@@ -370,6 +425,10 @@ input, textarea {
 .form-wrapper button {
   margin: 20px;
   float: right;
+}
+
+.hidden {
+  display: none;
 }
 
 }
