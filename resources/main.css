@@ -21,7 +21,7 @@ h1, h2, h3, .projects-wrapper > div {
   text-transform: uppercase;
 }
 
-.container, .container-mobile-menu {
+.container {
   position: relative;
   z-index: 1;
   height: 100%;
@@ -30,11 +30,6 @@ h1, h2, h3, .projects-wrapper > div {
   font-family: 'Open Sans', 'Oswald', sans-serif;
 }
 
-.container-mobile-menu {
-  position: fixed;
-  z-index: 99;
-  background-color: #3b3b3b;
-}
 
 .mobile-top-wrapper {
   justify-content: space-between;
@@ -58,11 +53,12 @@ h1, h2, h3, .projects-wrapper > div {
   font-weight: 300;
 }
 
-.mobile-list-wrapper ul{
+.mobile-list-wrapper ul {
   padding-left: 30x;
 }
 
 .mobile-list-wrapper ul li:first-child {
+  color: #fff;
   font-weight: 500;
 }
 
@@ -82,6 +78,10 @@ h1, h2, h3, .projects-wrapper > div {
   padding: 20px;
 }
 
+ .mobile-menu button{
+  background-color: unset;
+  border-color: transparent;
+}
 .mobile-top-wrapper, .mobile-footer-wrapper, nav ul, .header-title-wrapper,
 .mobile-menu, .projects-wrapper, .form-wrapper, .row-wrapper{
   display: flex;
@@ -108,9 +108,11 @@ nav ul li{
 .mobile-menu i{
   font-size: 35px;
 }
-.mobile-menu {
+.mobile-menu, .hidden {
   display: none;
 }
+
+
 
 .header-wrapper {
   height: 100vh;
@@ -169,7 +171,7 @@ nav ul li{
   /* se aplica ce am scris mai sus la .corner-wrapper */
 }
 
-.social-list li i{
+.social-list li i {
   font-size: 40px;
   padding: 10px;
 }
@@ -178,17 +180,16 @@ nav ul li{
   height: 60vh;
   align-items: center;
 }
-.header-title-wrapper h1{
+.header-title-wrapper h1 {
   font-size: 80px;
   font-weight: 400;
   letter-spacing: 10px;
 }
 
-.projects-wrapper, .wrapper{
+.projects-wrapper, .wrapper {
   position: relative;
   z-index: 1;
-  flex-wrap:wrap;
-  /* border: 5px solid yellow; */
+  flex-wrap: wrap;
   height: 100%;
 }
 
@@ -200,13 +201,12 @@ nav ul li{
 }
 
 /* aici puteai sa folosesti doar o clasa comuna in loc sa le listezi pe toate. nu este neaparat gresit, dar era o solutie mai simpla, care asigura si respectarea principiului de re-utilizare. */
-.projects-img1, .projects-img2, .projects-img3, .projects-img4, .projects-img5, .projects-img6 {
+.wrapper {
  position: relative;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  /* border: 2px solid red; */
 }
 
 .projects-img1 {
@@ -427,8 +427,19 @@ input, textarea {
   float: right;
 }
 
-.hidden {
-  display: none;
+.container-mobile-menu {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 99;
+  background-color: #3b3b3b;
+  color: white;
 }
+
+.hidden {
+    display: none;
+ }
 
 }
