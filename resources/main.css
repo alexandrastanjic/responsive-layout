@@ -32,6 +32,7 @@ h1, h2, h3, .projects-wrapper > div {
 
 
 .mobile-top-wrapper {
+  height: 20%;
   justify-content: space-between;
   padding: 30px;
 }
@@ -46,7 +47,7 @@ h1, h2, h3, .projects-wrapper > div {
 }
 
 .mobile-list-wrapper {
-  margin-top: 50px;
+  height: 45%;
   font-size: 36px;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 10px;
@@ -63,7 +64,6 @@ h1, h2, h3, .projects-wrapper > div {
 }
 
 .mobile-footer-wrapper {
-  margin-top: 14px;
   height: 35%;
   align-items: flex-end; 
   text-align: center;
@@ -196,8 +196,6 @@ nav ul li{
 .projects-wrapper > div {
   width: 33.3%;
   height: 100vh; 
-  /* am incercat sa folosesc % dar nu imi dau seama ce am facut gresit ce de nu merge */
-  /* % functioneaza cum te astepti doar daca intreg lantul ierarhic are un height impus, fie ca e fix sau %. dar daca la un singur element din latul ierarhic lipseste height, atunci sunt toate sansele sa iti ignore %, pentru ca nu stie din ce sa calculeze */
 }
 
 /* aici puteai sa folosesti doar o clasa comuna in loc sa le listezi pe toate. nu este neaparat gresit, dar era o solutie mai simpla, care asigura si respectarea principiului de re-utilizare. */
