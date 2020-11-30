@@ -1,9 +1,15 @@
+
+
 * {
   box-sizing: border-box;
 }
 html, body{
+  height: 100%;
+  width: 100%;
   margin:  0;
   padding: 0;
+  color: #ffffff;
+  font-family: 'Open Sans', 'Oswald', sans-serif;
 }
 
 a {
@@ -21,134 +27,58 @@ h1, h2, h3, .projects-wrapper > div {
   text-transform: uppercase;
 }
 
-.container {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  color: #ffffff;
-  font-family: 'Open Sans', 'Oswald', sans-serif;
+.bg-dark {
+  background-color: #2b2b2b !important;
 }
 
-
-.mobile-top-wrapper {
-  height: 20%;
-  justify-content: space-between;
-  padding: 30px;
+.btn-orange {
+  background-color: #c09c78;
 }
 
-.mobile-logo-text {
-  font-size:22px;
-}
-
-.mobile-top-wrapper img{
-  height: 40px;
-  width: auto;
-}
-
-.mobile-list-wrapper {
-  height: 45%;
-  font-size: 36px;
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: 10px;
-  font-weight: 300;
-}
-
-.mobile-list-wrapper ul {
-  padding-left: 30x;
-}
-
-.mobile-list-wrapper ul li:first-child {
-  color: #fff;
-  font-weight: 500;
-}
-
-.mobile-footer-wrapper {
-  height: 35%;
-  align-items: flex-end; 
-  text-align: center;
-}
-
-.mobile-footer-wrapper div  {
-  font-size: 40px;
-  color: #6B6B6B;
-  border: 1px solid #6B6B6B;
-  border-bottom: none;
-  width: 50%;
-  padding: 20px;
-}
-
- .mobile-menu button{
-  background-color: unset;
-  border-color: transparent;
-}
-.mobile-top-wrapper, .mobile-footer-wrapper, nav ul, .header-title-wrapper,
-.mobile-menu, .projects-wrapper, .form-wrapper, .row-wrapper{
-  display: flex;
-}
-
-nav ul, .header-title-wrapper, .mobile-menu {
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-nav ul li{
-  padding: 8px 15px;
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-.mobile-menu {
-  padding: 0 20px;
-  justify-content: center;
-  text-align: end;
-}
-
-.mobile-menu i{
-  font-size: 35px;
-}
-.mobile-menu, .hidden {
+.mobile-menu{
   display: none;
 }
 
 
-
-.header-wrapper {
-  height: 100vh;
+ .header-wrapper{
+  height: 100%;
   width: 100%;
   background-image: url(../assets/bg-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position:bottom;
   position: relative;
   z-index: 1;
-  padding: 50px;
-  font-family: 'Oswald', sans-serif;
-}
+ }
 
-.overlay {
+ header{
+   height: 100%;
+   
+ }
+
+
+ .overlay {
   background-color: rgba(41, 41, 41, 0.55);
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: -2;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
+}
+
+.corner-navbar-wrapper{
+  height: 50%;
+  width: 100%;
 }
 .corner-wrapper {
   background-color: #2b2b2b;
-  /* nu ai nevoie de pozitionare absoluta aici, este ordinea normala a layout-ului, trebuie doar sa renunti la padding si margin si ajungi la acelasi efect fara a aapela de pozitionare. Recomand pozitionarea doar daca este nevoie, nu ca o prima solutie */
-  position: absolute;
   top: 0;
   left: 0;
-  height: 60vh; 
+  height: 100%; 
   width: 25%;
 }
 
-.corner-wrapper p {
+.corner-wrapper .brand-name {
   font-size: 50px;
   padding-left: 40px;
   margin: 20px 0;
@@ -166,9 +96,6 @@ nav ul li{
   left: -30px;
   padding-top: 60px;
   color:#CDCDCD;
-
-  /*exista o varianta mai buna pt pozitionarea iconitelor?... */
-  /* se aplica ce am scris mai sus la .corner-wrapper */
 }
 
 .social-list li i {
@@ -176,166 +103,107 @@ nav ul li{
   padding: 10px;
 }
 
-.header-title-wrapper {
-  height: 60vh;
-  align-items: center;
-}
-.header-title-wrapper h1 {
-  font-size: 80px;
-  font-weight: 400;
-  letter-spacing: 10px;
+ .navbar, .nav {
+  width: 70%;
 }
 
-.projects-wrapper, .wrapper {
-  position: relative;
-  z-index: 1;
-  flex-wrap: wrap;
-  height: 100%;
-}
-
-.projects-wrapper > div {
-  width: 33.3%;
-  height: 100vh; 
-}
-
-/* aici puteai sa folosesti doar o clasa comuna in loc sa le listezi pe toate. nu este neaparat gresit, dar era o solutie mai simpla, care asigura si respectarea principiului de re-utilizare. */
-.wrapper {
- position: relative;
+.img {
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
+  height: 600px;
 }
 
-.projects-img1 {
-  background-image: url(../assets/concert-hall.jpg);
+.col-md-4{
+  padding: 0;
+}
+ .card-img-overlay {
+  background-color: rgba(41, 41, 41, 0.55);
+
 }
 
-.projects-img2 {
-  background-image: url(../assets/bedroom-2.jpg);
+.project-description {
+  font-size: 18px;
 }
-
-.projects-img3 {
-  background-image: url(../assets/hotel.jpg);
-}
-
-.projects-img4 {
-  background-image: url(../assets/bedroom-1.jpg);
-}
-
-.projects-img5 {
-  background-image: url(../assets/library.jpg);
-}
-
-.projects-img6 {
-  background-image: url(../assets/kitchen.jpg);
-}
-
-.wrapper .project-description{
+.project-category {
+  transform: rotate(-90deg);
+  height: 90%;
   font-size: 20px;
-  padding: 20px 0 0 20px;
-  font-family: 'Oswald', sans-serif;
   letter-spacing: 3px;
 }
 
-.project-description span:nth-child(3) {
+.text-wrapper{
+  height: 100%;
+}
+
+label {
+  display: none;
+}
+
+.form-wrapper {
+ height: 120px;;
+}
+
+::placeholder{
+  color: #fff !important;
+  font-size: 16px;
+}
+
+.bg-secondary, .btn-secondary {
+  background-color: #3d3d3d !important;
+}
+ 
+.form-control, .btn {
+  border-color: unset;
+  border: unset;
+}
+
+.text-color{
   color: #c09c78;
 }
 
-.wrapper .project-category {
-  font-size: 14px;
-  /* margin-top: 200px;  */
-  /* stiu, super manuala centrarea, din pacate tot nu am stiut cum sa fac si am facut-o in stilul meu caracteristic: bad practice dar frustrarea e mai mica cand vad asezat ok in pagina*/
-  /* se invata chestiile astea cu experienta, nu te nelinisti prea tare */
-  /* nu inteleg prea bine de ce nu ai pozitionat aici, acesta este unul din cazurile specifice unde vrem pozitionare */
-  /* bineinteles, pe mobile trebuie sa renunti la pozitionare, ca sa poti centra */
-  position: absolute;
-  bottom: -110px;
-  left: 150px;
-  /* cred ca poate sa fie confusing pozitionarea din cauza lui transform, dar poti sa renunti la transform temporar si sa vezi cum functioneaza, apoi sa ajustezi. de obicei trebuie sa le iei pe rand ca sa intelegi bine cum functioneaza fiecare */
-  transform: rotate(-90deg);
-  height: 50%;
-  letter-spacing: 5px;
-}
-
-footer{
-  width: 100%;
-  background-color: #2b2b2b;
-  text-align: center;
-}
-
-.form-wrapper{
-  justify-content: center;
-}
-
-.row-wrapper{
-    width: 650px;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-}
-
-.button-wrapper button, form button {
-  background-color: #3d3d3d;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 20px 20px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 10px;
-  margin: 40px auto;
-}
-
-.contact-wrapper h2 {
-  padding: 0;
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  font-size: 36px;
-  letter-spacing: 10px;
-  color: #fff;
-  font-weight: 300;
-
-}
-
-.contact-wrapper span{
-  color: #c09c78;
-}
-
-input,textarea {
-  padding: 20px;
-  margin: 10px;
-  background-color: #3b3b3b;
-  border: none;
-} 
-
-textarea {
-  height: 130px;
-}
-form button{
-  background-color: #c09c78;
-}
 form button i{
-  font: 30px;
+  font-size: px;
  
 }
 
-@media (max-width: 600px) {
-.mobile-menu{
-    display: block;
+@media (max-width: 769px) {
+
+
+  .project-category {
+    transform: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+ 
   }
 
-.desktop-menu {
-    display: none;
+  .project-description > div {
+    display: inline-block;
+ 
+  }
+  .project-description div:nth-child(2) {
+    color: #c09c78;
   }
 
-.header-wrapper{
-    height: 60vh;
+
+  .card-img-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-responsive {
+    font-size: calc(100% + 1vw + 1vh);
   }
 
-.corner-wrapper {
+  .corner-wrapper .brand-name {
+    font-size: 30px;
+  }
+   
+  .text-wrapper{
+    height: unset;
+  }
+
+  .corner-wrapper {
     width: 35%;
-    height:60%;
   }
 
 .corner-wrapper p {
@@ -360,84 +228,5 @@ form button i{
   justify-content: center;
 }
 
-.header-title-wrapper h1{
-  font-size: 60px;
-  font-weight: 300;
-}
-
-.projects-wrapper > div {
-  width: 100%;
-  height: 50vh;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.wrapper {
-  display: flex;
-}
-
-br {
-  display: none;
-}
-
-.wrapper .project-description , .project-category {
-  /* ai nevoie sa schimbi si directia aici, nu ajunge justify-content. flex de default le aseaza pe row, orizontal, una langa cealalta */
-  /* am pus regulile astea pe .projects-wrapper > div (randul 315 la mine, sper ca e clar de ce) */
-  /* nu pare centrat perfect vertical pentru ca ai un height de 50% pe category, pe care rog sa il ajustezi tu  */
- /* flex-direction: column;
-  justify-content: center; */
-  margin: 0 auto;  
-}
- /* nu inteleg ce fac gresit, nu reusesc sa centrez titlurile sub nicio forma
- project catergory pe mobile
- si pe langa asta, desi sunt toate aceeasi clasa, doua dintre ele sunt plasate aiurea - care ar putea fi motivul?*/
-
-.wrapper .project-category {
-  margin-top:0;
-  transform: none;
-  padding: 0;
-  position: unset;
-}
-
-input, textarea {
-  width: 90%;
-  display: inline-block;
-}
-
-.contact-wrapper .button-wrapper button{
-    display: none;
-}
-
-.row-wrapper{
- width: 100%;
- flex-direction: column;
- align-self: center;
-}
-
-.contact-wrapper h2 {
-  font-size: 40px;
-  padding: 20px;
-  font-family: 'Oswald', sans-serif;
-}
-
-.form-wrapper button {
-  margin: 20px;
-  float: right;
-}
-
-.container-mobile-menu {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top:0;
-  left: 0;
-  z-index: 99;
-  background-color: #3b3b3b;
-  color: white;
-}
-
-.hidden {
-    display: none;
- }
 
 }

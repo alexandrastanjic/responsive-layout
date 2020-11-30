@@ -1,97 +1,172 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="desctiption" content="Front end development course">
-    <meta name="keywords" content="HTML, CSS, Learning">
-    <meta name="author" content="Alexadra Stanjic">
-  
-    <title>Responsive Layout</title>
-  
-    <link rel="stylesheet" type="text/css" href="bundles/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="resources/main.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oswald:wght@300;400;500&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous" />
-  
-  </head>
-  
-  <!-- <header>
-    <div class="card-img-overlay"></div>
-    <div class="container-fluid header-img header-text">
-      <nav class="navbar navbar-expand-sm d-flex justify-content-between navbar-dark">
-        <a class="navbar-brand" href="index.html">
-          go.arch
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="desctiption" content="Front end development course">
+  <meta name="keywords" content="HTML, CSS, Learning">
+  <meta name="author" content="Alexadra Stanjic">
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="nav navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link text-uppercase h5 active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase h5" href="order.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase h5" href="order.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase h5" href="order.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase h5" href="order.html">Contact us</a>
-            </li>
+  <title>Go-ARCH Responsive Layout</title>
+
+  <link rel="stylesheet" type="text/css" href="bundles/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="resources/main.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oswald:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+
+</head>
+
+<body>
+
+  <div class="header-wrapper">
+    <header>
+      <div class="overlay"></div>
+
+      <div class="d-flex corner-navbar-wrapper">
+        <div class="corner-wrapper">
+          <div class="brand-name text-responsive">go.arch</div>
+
+          <div class="vertical-line"></div>
+
+          <ul class="social-list">
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-facebook-f"></i></li>
           </ul>
+
         </div>
 
+        <nav class="navbar navbar-expand-sm d-flex align-items-start justify-content-end navbar-dark">
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse d-flex justify-content-end my-3 mx-5" id="navbarCollapse">
+            <ul class="nav navbar-nav d-flex justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link text-uppercase h5 active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase h5" href="order.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase h5" href="order.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase h5" href="order.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase h5" href="order.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+      <nav class="mobile-menu">
+        <div id="btnIconOpen"><a><i class="fas fa-bars"></i></a></button></div>
       </nav>
 
-      <div class="display-1 text-uppercase text-white d-flex justify-content-end align-items-center mr-5  title ">
-        Projects</div>
-    </div>
-  </header>
+      <h1 class=" display-1 d-md-flex d-none justify-content-end mx-5 ">Projects</h1>
+      <h1 class=" display-3 d-sm-flex d-md-none justify-content-center mx-5 ">Projects</h1>
+    </header>
+
+  </div>
 
   <main class="container-fluid">
     <div class="row">
       <div class="col-md-4 col-sm-12 text-white">
-        <img src="assets/concert-hall.jpg" class="card-img img-fluid img" alt="concert-hall">
+        <img src="assets/concert-hall.jpg" class="card-img img" alt="concert-hall">
         <div class="card-img-overlay">
-          <div class="project-description text-uppercase">
-            <div>concert hall</div>
-            <div>in new york</div>
-          </div>
-          <div class="project-category text-uppercase mx-5 ">
-            <div class="py-3">architecutre</div>
+          <div class="text-wrapper">
+            <div class="project-description text-uppercase">
+              <div>concert hall</div>
+              <div>in new york</div>
+            </div>
+            <div class="project-category text-uppercase mx-2 ">
+              <div class="py-3">architecutre</div>
+            </div>
           </div>
         </div>
-
       </div>
       <div class="col-md-4 col-sm-12 ">
         <img src="assets/bedroom-2.jpg" alt="" class="img-fluid img">
+        <div class="card-img-overlay">
+          <div class="text-wrapper">
+            <div class="project-description text-uppercase">
+              <div>modern bedroom</div>
+              <div>in gorizia</div>
+            </div>
+            <div class="project-category text-uppercase mx-2 ">
+              <div class="py-3">interior</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <img src="assets/hotel.jpg" alt="" class="img-fluid  img">
+        <div class="card-img-overlay">
+          <div class="text-wrapper">
+            <div class="project-description text-uppercase">
+              <div>modern hotel</div>
+              <div>in london</div>
+            </div>
+            <div class="project-category text-uppercase mx-2">
+              <div class="py-3">architecutre</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-4 col-sm-12">
         <img src="assets/bedroom-1.jpg" alt="" class="img-fluid img">
+        <div class="card-img-overlay">
+          <div class="text-wrapper">
+            <div class="project-description text-uppercase">
+              <div>modern bedroom</div>
+              <div>in paris</div>
+            </div>
+            <div class="project-category text-uppercase mx-2 ">
+              <div class="py-3">interior</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <img src="assets/library.jpg" alt="" class="img-fluid img">
+        <div class="card-img-overlay">
+          <div class="text-wrapper">
+            <div class="project-description text-uppercase">
+              <div>modern library</div>
+              <div>in chicago</div>
+            </div>
+            <div class="project-category text-uppercase mx-2 ">
+              <div class="py-3">architecutre</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <img src="assets/kitchen.jpg" alt="" class="img-fluid img">
+        <div class="card-img-overlay">
+          <div class="text-wrapper">
+            <div class="project-description text-uppercase">
+              <div>modern kitchen</div>
+              <div>in bucharest</div>
+            </div>
+            <div class="project-category text-uppercase mx-2 ">
+              <div class="py-3">interior</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -99,7 +174,7 @@
   <footer class="bg-dark">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center my-5">
-        <button type="button" class=" btn text-capitalize btn-secondary "> more projects</button>
+        <button type="button" class=" btn text-capitalize btn-secondary d-sm-none d-md-block rounded-pill btn-lg px-5 py-3 "> more projects</button>
       </div>
     </div>
 
@@ -110,259 +185,55 @@
     </div>
 
     <form>
-      <div class="col-md-10 offset-md-2 col-sm-12 d-flex justify-content-center">
-        <div class="col-md-6 col-sm-12 d-flex flex-wrap">
-          <div class="row d-flex justify-content-center flex-wrap ">
-            <div class="form-group col-md-6 col-sm-12 py-2 px-3">
-              <label for="userNameInput">Username</label>
-              <input class="form-control form-control-lg" type="text" placeholder="Name" id="userNameInput">
+
+      <div class="col-md-10 offset-md-2 col-sm-12 ">
+        <div class="row">
+          <div class=" col-md-10  d-flex flex-wrap ">
+            <div class="form-group col-md-4 col-sm-12 py-2 px-3">
+              <label for="userNameInput">Name</label>
+              <input class="form-control form-control-lg bg-secondary rounded-0 mb-4" type="text" placeholder="Name" id="userNameInput">
+
+              <label for="userPhoneInput">Phone</label>
+              <input class="form-control form-control-lg bg-secondary rounded-0 " type="number" placeholder="Phone" id="userPhoneInput">
             </div>
 
-            <div class="form-group col-md-6 col-sm-12  py-2 px-3">
-              <label for="phoneNumberInput">Phone Number</label>
-              <input class="form-control form-control-lg" type="number" placeholder="Phone" id="phoneNumberInput">
-            </div>
-
-            <div class="form-group col-md-6 col-sm-12  py-2 px-3">
+            <div class="form-group col-md-4 col-sm-12 py-2 px-3">
               <label for="userEmailInput">Email</label>
-              <input class="form-control form-control-lg" type="email" placeholder="Email" id="userEmailInput">
-            </div>
+              <input class="form-control form-control-lg bg-secondary rounded-0   mb-4" type="email" placeholder="Email" id="userEmailInput">
 
-            <div class="form-group col-md-6 col-sm-12  py-2 px-3">
               <label for="userCompanyInput">Company</label>
-              <input class="form-control form-control-lg" type="text" placeholder="Company" id="phoneNumberInput">
+              <input class="form-control form-control-lg bg-secondary rounded-0 " type="text" placeholder="Company" id="userCompanyInput">
             </div>
+            <div class="form-group col-md-4 col-sm-12 py-2 px-3">
+              <label for="userMessageInput">Message</label>
+              <input class="form-control form-control-lg bg-secondary rounded-0  form-wrapper" type="text" placeholder="Message"
+                id="userMessageInput">
+            </div>
+
+
           </div>
-
-
         </div>
-
-        <div class="col-md-4 col-sm-12">
-
-          <div class="form-group col-md-8 col-sm-12  py-2 px-3 ">
-            <label for="userCompanyInput">Company</label>
-            <input class="form-control form-control-lg" type="text" placeholder="Message" id="phoneNumberInput">
+        <div class="row">
+          <div class="col-md-10 d-md-flex justify-content-center my-5 d-none ">
+            <button type="submit" class=" btn text-capitalize btn-orange rounded-pill  btn-lg text-white px-5 py-3 ">Submit <i class="fas fa-arrow-right"></i></button>
           </div>
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 d-flex justify-content-center my-5">
-          <button type="submit" class=" btn text-capitalize btn-secondary "> Submit</button>
-        </div>
-      </div>
-
-
+          <div class="col-md-10 d-flex justify-content-end my-3 d-md-none">
+            <button type="submit" class=" btn text-capitalize btn-orange rounded-pill btn-sm text-white px-4 py-2 ">Submit <i class="fas fa-arrow-right"></i></button>
+          </div>
+      
 
 
       </div>
-      </div>
+
+
+
     </form>
-  </footer> -->
+  </footer>
 
-<body>
-  <div class="container">
-        <div class="header-wrapper">
-          <header>
-          <div class="overlay"></div>
-          <div class="corner-wrapper">
-            <p>go.arch</p>
-
-            <div class="vertical-line"></div>
-
-            <ul class="social-list">
-              <li><i class="fab fa-instagram"></i></li> 
-              <li><i class="fab fa-facebook-f"></i></li>
-            </ul>
-
-          </div>
-
-          <nav class="navbar navbar-expand-sm d-flex justify-content-end navbar-dark">
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase h5 active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase h5" href="order.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase h5" href="order.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase h5" href="order.html">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase h5" href="order.html">Contact us</a>
-                </li>
-              </ul>
-            </div>
-    
-          </nav>
-
-            <nav class="mobile-menu">
-             <div id="btnIconOpen"><a><i class="fas fa-bars"></i></a></button></div>
-            </nav>
-
-            <div class="header-title-wrapper">
-              <h1>Projects</h1>
-            </div>
-        </header>
-      </div>
-
-      <main>
-        
-        <div class="projects-wrapper">
-        
-          <div class="projects-img1 wrapper">
-            <div class="overlay"></div>
-            <div class="project-description">
-                <span>Concert Hall</span>
-                <br>
-                <span>In New York</span>
-            </div>
-            <div class="project-category">
-                <p>Architecture</p>
-            </div>
-          </div>
-      
-      
-          <div class="projects-img2 wrapper">
-            <div class="overlay"></div>
-            <div class="project-description">
-                <span>modern bedroom</span>
-                <br>
-                <span>in gorizia</span>
-            </div>
-            <div class="project-category">
-                <p>interior</p>
-            </div>
-          </div>
-      
-          <div class="projects-img3 wrapper">
-            <div class="overlay"></div>
-            <div class="project-description">
-                <span>modern hotel</span>
-                <br>
-                <span>in london</span>
-            </div>
-            <div class="project-category">
-                <p>Architecture</p>
-            </div>
-          </div>
-          
-          <div class="projects-img4 wrapper">
-            <div class="overlay"></div>
-            <div class="project-description">
-                <span>modern bedroom</span>
-                <br>
-                <span>in paris</span>
-            </div>
-            <div class="project-category">
-                <p>interior</p>
-            </div>
-          </div>
-      
-          <div class="projects-img5 wrapper">
-            <div class="overlay"></div>
-            <div class="project-description">
-                <span>modern library</span>
-                <br>
-                <span>in chicago</span>
-            </div>
-            <div class="project-category">
-                <p>Architecture</p>
-            </div>
-          </div>
-      
-          <div class="projects-img6 wrapper">
-            <div class="overlay"></div>
-            <div class="project-description">
-                <span>modern kitchen</span>
-                <br>
-                <span>in bucharest</span>
-            </div>
-            <div class="project-category">
-                <p>interior</p>
-            </div>
-          </div>
-        </div> 
-      </main>
-
-      <footer>
-        <div class="contact-wrapper">
-          <div class="button-wrapper">
-            <button type="button">More projects</button>
-          </div>
-
-          <h2>Get <span>in touch</span></h2>
-          
-          <div class="form-wrapper">
-            <form action="">
-              <div class="row-wrapper">
-                <div >
-                  <input type="text" id="name" name="name" placeholder="Name">
-                  <input type="text" id="phone" name="phone" placeholder="Phone">
-                </div>
-
-                <div >
-                  <input type="email" id="email" name="email" placeholder="Email">
-                  <input type="text" id="company" name="company" placeholder="Company" >
-                </div>
-                
-                <div>
-                  <textarea id="message" name="message"   placeholder="Message"></textarea>
-                </div>
-              </div>
-                
-              <button type="submit">Send
-                <i class="fas fa-arrow-right"></i>
-              </button>
-              <div class="clearfix"></div>
-            </form>
-        </div>
-      </footer>
-
-  </div>
-
-  <div id="mobileMenu" class="container-mobile-menu hidden">
-    <div class="mobile-top-wrapper">
-       <div class="mobile-logo-text">go.arch</div>
-       <div id="btnIconClose" class="mobile-close-icon">
-         <img src="assets/icon-close.png" alt="">
-       </div>
-    </div>
-
-    <div class="mobile-list-wrapper">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact us</a></li>
-      </ul>
-    </div>
-
-    <!-- nu sunt pizitionare in josul paginii cum este cerut de layout, ti-am atasat un screenshot de ce anume vad eu -->
-    <!-- poti folosi tehnica de pozitionare absoluta fata de un parinte relativ sa nu fie o pozitionare manuala -->
-    <div class="mobile-footer-wrapper">
-      <div>
-        <i class="fab fa-instagram"></i>
-      </div>
-      <div>
-        <i class="fab fa-facebook-f"></i>
-      </div>
-    </div>
-  </div>
 
   <script src="bundles/jquery/jquery-3.5.1.min.js"></script>
   <script src="resources/main.js"></script>
   <script src="bundles/bootstrap/js/bootstrap.js"></script>
 </body>
+
+</html>
